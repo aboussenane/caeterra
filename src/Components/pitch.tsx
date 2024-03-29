@@ -59,7 +59,7 @@ const Pitch: React.FC = () => {
                                 
                                 maxW={{ base: '100%', sm: '200px' }}
                                 borderRadius={5}
-                                src={`/images/Testimonials/${imageName}`}
+                                src={`/Images/Testimonials/${imageName}`}
                                 alt={imageName}
                                 />
                             

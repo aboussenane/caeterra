@@ -22,7 +22,7 @@ const About: React.FC = () => {
                                 boxSize='45%'
                                 objectFit='cover'
                                 borderRadius={5}
-                                src={`/images/Team/${imageName}`}
+                                src={`/Images/Team/${imageName}`}
                                 alt={imageName}
                                 />
                             </Center>
