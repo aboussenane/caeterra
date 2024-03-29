@@ -1,8 +1,8 @@
 
 'use client'
 import Head from 'next/head';
-import Header from '../components/header'
-import Intro from '../components/intro'
+import Header from '../Components/header'
+import Intro from '../Components/intro'
 import {VStack} from '@chakra-ui/react'
 import Hero from '@/Components/hero';
 import About from '@/Components/about';
