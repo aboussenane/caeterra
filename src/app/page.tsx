@@ -17,8 +17,7 @@ export default function Home() {
       <Header />
       <VStack spacing={8}>
         <Intro/>
-        <Hero/>
-        <About/>
+        <div className="h-10"></div>
         <Services/>
         <Pitch/>
         <Contact/>

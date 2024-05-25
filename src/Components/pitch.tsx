@@ -10,38 +10,45 @@ const Pitch: React.FC = () => {
     <VStack spacing={8} p={4} bg='white' w='100vw' display='flex' justifyContent='center' alignItems='center' position='relative' >
         <Heading>Why Choose Caeterra</Heading>
         <Container >
-  There are many benefits to a joint design and development system. Not only
-  does it bring benefits to the design team, but it also brings benefits to
-  engineering teams. It makes sure that our experiences have a consistent look
-  and feel, not just in our design specs, but in production
+        Discover why property owners choose Caeterra. Our track record speaks for itself - see testimonials from satisfied clients and visual proof of success.
   
         </Container>
         <Divider />
         <List spacing={3}>
             <ListItem>
                 <ListIcon as={MdCheckCircle} color='green.500' />
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                10 year track record of success in Ottawa's short-term rental market.
             </ListItem>
             <ListItem>
                 <ListIcon as={MdCheckCircle} color='green.500' />
-                Assumenda, quia temporibus eveniet a libero incidunt suscipit
+                Proven quality of service with 5-star reviews from satisfied clients.
             </ListItem>
             <ListItem>
                 <ListIcon as={MdCheckCircle} color='green.500' />
-                Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                One stop shop for all your property management needs.
             </ListItem>
             {/* You can also use custom icons from react-icons */}
             <ListItem>
                 <ListIcon as={MdCheckCircle} color='green.500' />
-                Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                Face to face meetings with our team to ensure your property is in good hands.
             </ListItem>
         </List>
         <Divider />
-        <Box overflowX='auto' w='full' p={4} sx={{
+        
+    </VStack>
+    
+        
+    );
+};
+
+export default Pitch;
+
+/* Testimonials Section carousel
+<Box overflowX='auto' w='full' p={4} sx={{
                     WebkitOverflowScrolling: 'touch', // This enables momentum-based scrolling on iOS devices.
-                    scrollbarWidth: 'none', /* For Firefox */
+                    scrollbarWidth: 'none', 
                     '&::-webkit-scrollbar': {
-                        display: 'none', /* For Chrome, Safari, and Opera */
+                        display: 'none', 
                     },
                 }}>
                 <Stack direction='row' spacing={4}>
@@ -76,10 +83,4 @@ const Pitch: React.FC = () => {
                     ))}
                 </Stack>
             </Box>
-    </VStack>
-    
-        
-    );
-};
-
-export default Pitch;
+            */

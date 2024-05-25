@@ -9,7 +9,6 @@ const About: React.FC = () => {
     return (
     <VStack spacing={8} p={4} bg='white' w='100vw' display='flex' justifyContent='center' alignItems='center' position='relative' >
         
-        <Container borderWidth={2} borderRadius={5}>Engaging introduction to Caeterra</Container>
         <Box overflowX='auto' w='full' p={4} >
                 <Grid templateColumns='repeat(2, 1fr)' gap={6}>
                 {imageNames.map((imageName, index) => (

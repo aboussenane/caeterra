@@ -1,10 +1,10 @@
 'use client'
 
-import { Box, Center, Stack, Button, ButtonGroup, Grid, GridItem, VStack,Card, CardHeader, CardBody, CardFooter, Heading, Text, Divider} from '@chakra-ui/react'
+import { Box, Center, Stack, Button, ButtonGroup, Grid, Link, GridItem, VStack,Card, CardHeader, CardBody, CardFooter, Heading, Text, Divider} from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import React from 'react';
-const imageNames = ['Full-Service Property Management.png', 'Cleaning Services.png', 'Cleaning Services.png', 'Listing Management.png','Guest Management.png'];
-const details = ['Service details', 'Service details', 'Service details', 'Service details', 'Service details', 'Service details', 'John details', 'Spiderman details'];
+const imageNames = ['Full-Service Property Management.jpg', 'Cleaning Services.jpg', 'Listing Management.jpg','Guest Management.jpg'];
+const details = ['Caeterra takes the stress out of managing your property. Our full-service approach covers everything from bookings to ensuring your space is ready for guests at all times.', 'Exceptional cleanliness is our promise. Caeterra\'s professional cleaning services ensure your property shines with cleanliness and attention to detail, maximizing guest satisfaction.', 'Optimize your property\'s online presence with Caeterra. Our experts craft compelling listings that stand out in Ottawa\'s competitive short-term rental market.', 'Guest satisfaction is our priority. Caeterra manages all guest interactions, providing a smooth and enjoyable experience for your guests from booking to check-out.', 'Service details', 'John details', 'Spiderman details'];
 const Services: React.FC = () => {
     return (
     <VStack spacing={8} p={4} bg='white' w='100vw' display='flex' justifyContent='center' alignItems='center' position='relative' >
@@ -25,7 +25,8 @@ const Services: React.FC = () => {
                                 <Center>
                                     <Image
                                     key={imageName}
-                                    boxSize='45%'
+                                    boxSize='45vw'
+                                    
                                     objectFit='cover'
                                     borderRadius={5}
                                     src={`/images/Services/${imageName}`}
@@ -34,19 +35,18 @@ const Services: React.FC = () => {
                                 </Center>
                                 <Stack mt='6' spacing='3'>
                                 
-                                <Heading size='md'>{imageName.replace('.png', '')}</Heading>
+                                <Heading size='md'>{imageName.replace('.jpg', '')}</Heading>
                                 <Text>
                                 {details[index]}
                                 </Text>
                                 <Divider />
                                 <CardFooter>
                                 <ButtonGroup spacing='4'>
-                                <Button variant='solid' colorScheme='blue'>
+                                <Link href={`mailto:Caterra@gmail.com?subject=${encodeURIComponent(imageName.replace('.jpg', ''))}`}target="_blank">
+                                    <Button variant='solid' colorScheme='red'>
                                     Book now
-                                </Button>
-                                <Button variant='ghost' colorScheme='blue'>
-                                    Learn More
-                                </Button>
+                                    </Button>
+                                </Link>
                                 </ButtonGroup>
                             </CardFooter>
                                 </Stack>
@@ -55,7 +55,7 @@ const Services: React.FC = () => {
                     ))}
                 </Grid>
             </Box>
-        <Button colorScheme='blue' p={4}>View Our Services</Button> 
+        
     </VStack>
     
         
