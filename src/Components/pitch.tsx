@@ -1,8 +1,9 @@
 'use client'
 
 import {List,ListItem,ListIcon, Container, Card, CardBody,Center,Text, Heading, Button, ButtonGroup, VStack, Divider, Box,Stack,Image} from '@chakra-ui/react'
-import { MdCheckCircle } from 'react-icons/md'
+import { MdCheckCircle, MdStar } from 'react-icons/md'
 import React from 'react';
+import { BiTrophy } from 'react-icons/bi';
 const imageNames = ['image-1.png', 'image-2.png', 'image-3.png', 'image-4.png'];
 const details = ['testimonial details', 'testimonial details', 'testimonial details', 'testimonial details', 'testimonial details', 'testimonial details', 'John details', 'Spiderman details'];
 const Pitch: React.FC = () => {
@@ -20,12 +21,12 @@ const Pitch: React.FC = () => {
                 10 year track record of success in Ottawa's short-term rental market.
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
+                <ListIcon as={MdStar} color='gold' />
                 Proven quality of service with 5-star reviews from satisfied clients.
             </ListItem>
             <ListItem>
-                <ListIcon as={MdCheckCircle} color='green.500' />
-                One stop shop for all your property management needs.
+                <ListIcon as={BiTrophy} color='gold' />
+                Guest favourite on Airbnb with over 1000 bookings and counting.
             </ListItem>
             {/* You can also use custom icons from react-icons */}
             <ListItem>
@@ -33,7 +34,7 @@ const Pitch: React.FC = () => {
                 Face to face meetings with our team to ensure your property is in good hands.
             </ListItem>
         </List>
-        <Divider />
+       
         
     </VStack>
     

@@ -20,7 +20,7 @@ const Services: React.FC = () => {
                 <Grid templateColumns='repeat(2, 1fr)' gap={6}>
                 {imageNames.map((imageName, index) => (
                         
-                        <Card minW='sm'>
+                        <Card minW='sm'maxWidth='1000px'>
                             <CardBody>
                                 <Center>
                                     <Image
@@ -29,7 +29,7 @@ const Services: React.FC = () => {
                                     
                                     objectFit='cover'
                                     borderRadius={5}
-                                    src={`/images/Services/${imageName}`}
+                                    src={`/Images/Services/${imageName}`}
                                     alt={imageName}
                                     />
                                 </Center>
@@ -42,7 +42,7 @@ const Services: React.FC = () => {
                                 <Divider />
                                 <CardFooter>
                                 <ButtonGroup spacing='4'>
-                                <Link href={`mailto:Caterra@gmail.com?subject=${encodeURIComponent(imageName.replace('.jpg', ''))}`}target="_blank">
+                                <Link href={`mailto:info.caeterra@gmail.com?subject=${encodeURIComponent(imageName.replace('.jpg', ''))}`}target="_blank">
                                     <Button variant='solid' colorScheme='red'>
                                     Book now
                                     </Button>

@@ -3,13 +3,14 @@
 import Head from 'next/head';
 import Header from '../Components/header'
 import Intro from '../Components/intro'
-import {VStack} from '@chakra-ui/react'
+import {ListIcon, VStack} from '@chakra-ui/react'
 import Hero from '@/Components/hero';
 import About from '@/Components/about';
 import Services from '@/Components/service';
 import Pitch from '@/Components/pitch';
 import Contact from '@/Components/contact';
 import Footer from '@/Components/footer';
+import Listings from '@/Components/listings';
 
 export default function Home() {
   return (
@@ -20,8 +21,10 @@ export default function Home() {
         <div className="h-10"></div>
         <Services/>
         <Pitch/>
+        <Listings/>
         <Contact/>
         <div className="h-10"></div>
+        
         <Footer/>
       </VStack>
       

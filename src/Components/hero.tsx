@@ -7,23 +7,22 @@ const imageNames = ['image-1.jpg'];
 
 const Hero: React.FC = () => {
     return (
-    <VStack spacing={8} p={0} bg='white' w='100vw' display='flex' justifyContent='center' alignItems='center' position='relative' >
+    <Center>
         <Center>
         
             <Image      
                 boxSize='75%'
                 objectFit='cover'
                 width='100%'
-                
+                maxWidth='1000px'
                 borderRadius={5}
-                src={`/images/Hero/image-1.jpg`}
+                src={`/Images/Hero/image-1.jpg`}
                 alt="Home"
             />
     
             
         </Center>
-        <Center top={-10} position='relative' fontWeight={"bold"}>Ottawa's full service Property Management Company</Center>
-    </VStack>
+    </Center>
     
         
     );

@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
     e.preventDefault();
     const subject = encodeURIComponent(`Service Inquiry: ${service}`);
     const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nMessage: ${message}`);
-    window.open(`mailto:aboussenane@gmail.com?subject=${subject}&body=${body}`);
+    window.open(`mailto:info.caeterra@gmail.com?subject=${subject}&body=${body}`);
     setSubmitted(true);
   };
 
