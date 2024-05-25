@@ -28,7 +28,7 @@ const Services: React.FC = () => {
                                     boxSize='45%'
                                     objectFit='cover'
                                     borderRadius={5}
-                                    src={`/Images/Services/${imageName}`}
+                                    src={`/images/Services/${imageName}`}
                                     alt={imageName}
                                     />
                                 </Center>

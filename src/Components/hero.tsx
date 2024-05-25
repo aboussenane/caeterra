@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
                             boxSize='45%'
                             objectFit='cover'
                             borderRadius={5}
-                            src={`/Images/Hero/${imageName}`}
+                            src={`/images/Hero/${imageName}`}
                             alt={imageName}
                         />
                     ))}
