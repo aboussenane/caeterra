@@ -2,7 +2,7 @@
 
 import { Center, InputGroup, InputLeftAddon, Card, Select, Input, CardBody, CardFooter, Divider, Stack, Heading, Button, ButtonGroup, HStack, Text } from '@chakra-ui/react'
 import React, { useState } from 'react';
-import axios from 'axios';
+
 
 const Contact: React.FC = () => {
   const [name, setName] = useState('');
