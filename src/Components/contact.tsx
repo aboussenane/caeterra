@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const subject = encodeURIComponent(`Service Inquiry: ${service}`);
     const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nMessage: ${message}`);
