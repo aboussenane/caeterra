@@ -24,7 +24,7 @@ const Header: React.FC = () => {
 
     return (
         <Box
-            bg="transparent"
+            
             w="100vw"
             h="35px"
             display="flex"
