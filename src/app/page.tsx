@@ -1,5 +1,6 @@
 
 'use client'
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from '../Components/header'
 import Intro from '../Components/intro'
@@ -11,24 +12,36 @@ import Pitch from '@/Components/pitch';
 import Contact from '@/Components/contact';
 import Footer from '@/Components/footer';
 import Listings from '@/Components/listings';
+import ListingsPage from '../../pages/listings';
+import HomePage from '../../pages/home';
+import { Center } from '@chakra-ui/react';
+import { Providers } from '../app/providers';
 
 export default function Home() {
+  const [currentPage, setCurrentPage] = useState('home');
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <HomePage />;
+      case 'listings':
+        return <ListingsPage />;
+      default:
+        return <HomePage />;
+    }
+  };
   return (
+    
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Header />
+      <Header onSelectPage={setCurrentPage} />
       <VStack spacing={8}>
-        <Intro/>
-        <div className="h-10"></div>
-        <Services/>
-        <Pitch/>
-        <Listings/>
-        <Contact/>
-        <div className="h-10"></div>
-        
+      <Center>
+      {renderPage()}
+      </Center>
         <Footer/>
       </VStack>
       
       
     </main>
+    
   );
 }

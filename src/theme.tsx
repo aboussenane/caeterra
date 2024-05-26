@@ -1,6 +1,5 @@
 import { extendTheme } from "@chakra-ui/react"
-import '@fontsource-variable/open-sans'
-import '@fontsource-variable/raleway'
+
 const colors = {
     brand: {
       50: '#fcfcfc', // lightest
@@ -12,12 +11,12 @@ const colors = {
   };
 //change the font family to Arial
 
-  const theme = extendTheme({
-    colors,
-    fonts: {
-        heading: `'Open Sans', sans-serif`,
-        body: `'Raleway', sans-serif`,
-      },
-  });
+const theme = extendTheme({
+  colors,
+  fonts: {
+    heading: `'Arial', sans-serif`,
+    body: `'Arial', sans-serif`,
+  },
+});
   
   export default theme;

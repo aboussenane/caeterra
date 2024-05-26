@@ -1,10 +1,11 @@
 // pages/listings.tsx
 'use client'
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SimpleGrid, VStack, Box, Heading, Text, HStack } from '@chakra-ui/react';
 import Header from '../src/Components/header';
 import Footer from '../src/Components/footer';
 import { Helmet } from 'react-helmet';
+
 const listings = [
     { id: '45030247', title: 'Rental unit in Ottawa · ★4.98 · 2 bedrooms · 3 beds · 1 bath' },
     { id: '53477364', title: 'Rental unit in Ottawa · ★4.91 · 2 bedrooms · 3 beds · 1 bath' },
@@ -24,15 +25,26 @@ const listings = [
 ];
 
 const ListingsPage: React.FC = () => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://www.airbnb.ca/embeddable/airbnb_jssdk";
+        script.async = true;
+        document.body.appendChild(script);
+    
+        return () => {
+          document.body.removeChild(script);
+        };
+      }, []);
     return (
+        
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <Header />
+            
             <Helmet>
                 <script async src="https://www.airbnb.ca/embeddable/airbnb_jssdk"></script>
             </Helmet>
-            <VStack spacing={8} w='100vw' display='flex' justifyContent='center' alignItems='center' position='relative' >
-            <Box w='100vw' overflowX='auto' padding={10}>
-            <SimpleGrid minChildWidth='max-content' spacing='40px'>
+            
+            <Box w='95vw' overflowX='auto' padding={10}>
+            <SimpleGrid minChildWidth='450px' spacing='40px'>
                 {listings.map((listing) => (
                     
                     <Box key={listing.id} padding={10} flex='0 0 auto'>
@@ -45,9 +57,11 @@ const ListingsPage: React.FC = () => {
                 ))}
             </SimpleGrid>
             </Box>
-           </VStack>
-            <Footer />
+            
+           
+            
         </main>
+        
     );
 };
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { Link, Button, Box, HStack, VStack, Divider } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
 const listings = [
@@ -23,21 +23,31 @@ const listings = [
 ];
 
 const Listings: React.FC = () => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://www.airbnb.ca/embeddable/airbnb_jssdk";
+        script.async = true;
+        document.body.appendChild(script);
+    
+        return () => {
+          document.body.removeChild(script);
+        };
+      }, []);
     return (
         <>
             <Helmet>
                 <script async src="https://www.airbnb.ca/embeddable/airbnb_jssdk"></script>
             </Helmet>
             <VStack spacing={8} w='100vw' display='flex' justifyContent='center' alignItems='center' position='relative' >
-            <Box w='100vw' overflowX='auto' padding={10}>
+            <Box w='95vw' overflowX='auto' padding={10}>
             <HStack
                 spacing={8} minWidth='max-content'
                 
             >
                 {listings.map((listing) => (
                     
-                    <Box key={listing.id} padding={10} flex='0 0 auto'>
-                        <div className="airbnb-embed-frame" data-id={listing.id} data-view="home" data-hide-price="true" style={{ width: '450px', height: '300px', margin: 'auto' }}>
+                    <Box key={listing.id} padding={10} flex='0 0 auto' >
+                        <div className="airbnb-embed-frame" data-id={listing.id} data-view="home" data-hide-price="true" style={{ width: '450px', height: '300px', margin: 'auto', borderRadius:'15px'}}>
                             <a href={`https://www.airbnb.ca/rooms/${listing.id}?guests=1&adults=1&s=66&source=embed_widget`}>View On Airbnb</a>
                             <a href={`https://www.airbnb.ca/rooms/${listing.id}?guests=1&adults=1&s=66&source=embed_widget`} rel="nofollow">{listing.title}</a>
                         </div>
@@ -46,8 +56,8 @@ const Listings: React.FC = () => {
                 ))}
             </HStack>
             </Box>
-            <Link href='/listings'>
-            <Button>See All</Button>
+            <Link href='https://www.airbnb.ie/users/show/58779242' target='_blank'>
+            <Button>See Airbnb Profile</Button>
             </Link>
             <Divider />
             </VStack>
