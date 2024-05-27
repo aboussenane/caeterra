@@ -37,7 +37,7 @@ const ListingsPage: React.FC = () => {
       }, []);
     return (
         
-        <Box className="flex min-h-screen flex-col items-center justify-between" w="100%" p="4" md="p-24">
+        <Box className="flex min-h-screen flex-col items-center justify-between" w="100%" p="4">
             
             <Helmet>
                 <script async src="https://www.airbnb.ca/embeddable/airbnb_jssdk"></script>

@@ -13,7 +13,7 @@ import { Box } from '@chakra-ui/react';
 
 const HomePage: React.FC = () => {
     return (
-        <Box className="flex min-h-screen flex-col items-center justify-between" w="100%" p="4" md="p-24">
+        <Box className="flex min-h-screen flex-col items-center justify-between" w="100%" p="4" >
         
         <Intro/>
         <div className="h-10"></div>
