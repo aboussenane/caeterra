@@ -8,6 +8,7 @@ const imageNames = ['image-1.png', 'image-2.png', 'image-3.png', 'image-4.png'];
 const details = ['testimonial details', 'testimonial details', 'testimonial details', 'testimonial details', 'testimonial details', 'testimonial details', 'John details', 'Spiderman details'];
 const Pitch: React.FC = () => {
     return (
+    <Center>
     <VStack spacing={8} p={4} bg='white' w='100vw' display='flex' justifyContent='center' alignItems='center' position='relative' >
         <Heading>Why Choose Caeterra</Heading>
         <Container >
@@ -37,7 +38,7 @@ const Pitch: React.FC = () => {
        
         
     </VStack>
-    
+    </Center>
         
     );
 };

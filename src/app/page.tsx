@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from '../Components/header'
 import Intro from '../Components/intro'
-import {ListIcon, VStack} from '@chakra-ui/react'
+import {ListIcon, VStack, Box} from '@chakra-ui/react'
 import Hero from '@/Components/hero';
 import About from '@/Components/about';
 import Services from '@/Components/service';
@@ -31,17 +31,15 @@ export default function Home() {
   };
   return (
     
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Header onSelectPage={setCurrentPage} />
-      <VStack spacing={8}>
-      <Center>
-      {renderPage()}
-      </Center>
-        <Footer/>
-      </VStack>
-      
-      
-    </main>
+    <Providers>
+      <Box className="flex min-h-screen flex-col items-center justify-between" w="100%" p="4" md="p-24">
+        <Header onSelectPage={setCurrentPage} />
+        <VStack spacing={8} w="100%" alignItems="center">
+          {renderPage()}
+          <Footer />
+        </VStack>
+      </Box>
+    </Providers>
     
   );
 }

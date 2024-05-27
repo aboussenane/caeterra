@@ -20,12 +20,13 @@ const Contact: React.FC = () => {
   };
 
   return (
+    <Center>
     <HStack spacing={8} p={10} bg='white' w='100vw' display='flex' justifyContent='center' alignItems='center' position='relative'>
-      <Card minWidth='250px' maxWidth='50%'>
+      <Card minWidth='350px' maxWidth='50%'>
         <CardBody>
           {submitted ? (
             <Center>
-              <Text fontSize='xl' color='red'>Thank you for your inquiry! We will get back to you soon.</Text>
+              <Text fontSize='xl' color='green.400'>Thank you for your inquiry! We will get back to you soon.</Text>
             </Center>
           ) : (
             <form onSubmit={handleSubmit}>
@@ -33,6 +34,7 @@ const Contact: React.FC = () => {
                 <Heading size='md'>Contact Us</Heading>
                 <Input
                   placeholder='Name'
+                  name='Full Name'
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -40,6 +42,7 @@ const Contact: React.FC = () => {
                   <InputLeftAddon>+1</InputLeftAddon>
                   <Input
                     type='tel'
+                    name='Phone Number'
                     placeholder='Phone number'
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -58,6 +61,7 @@ const Contact: React.FC = () => {
                 </Select>
                 <Input
                   placeholder='Message'
+                  
                   minHeight='100px'
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -78,6 +82,7 @@ const Contact: React.FC = () => {
         </CardBody>
       </Card>
     </HStack>
+    </Center>
   );
 };
 

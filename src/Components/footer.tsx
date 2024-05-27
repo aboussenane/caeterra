@@ -5,33 +5,26 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-    <Box bg='whitesmoke' p='20' w='100vw' h='10vh' display='flex' justifyContent='center' alignItems='center' position='absolute' bottom='0' left='0' right='0' >
+    <Center>
+    <Box bg='whitesmoke' p='10' w='100vw' h='10vh' display='flex' justifyContent='center' alignItems='center' position='absolute' bottom='0' left='0' right='0' >
         <VStack display='flex' justifyContent='center' alignItems='center' position='relative'>
             
             <Box>
                 <Center>
-                    <Link href='/about' color='black' padding='20px'>
-                        Facebook
-                    </Link>
-                    <Link href='/about' color='black'  padding='20px'>
-                        Twitter
-                    </Link>
-                    <Link href='/about' color='black'  padding='20px'>
-                        Instagram
-                    </Link>
+                    
                     <Link href='https://rooms.xyz/dankroomz/caeterrahome' color='black' padding='20px'>
                         Ask our AI characters!
                     </Link>
                 </Center>
             </Box>
             
-            <Box>
-            © 2024 Caeterra. All Rights Reserved.
+            <Box >
+            &copy; {new Date().getFullYear()} Caeterra. All Rights Reserved.
             
             </Box>
         </VStack>
     </Box>
-    
+    </Center>
         
     );
 };

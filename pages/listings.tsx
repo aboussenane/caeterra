@@ -37,18 +37,18 @@ const ListingsPage: React.FC = () => {
       }, []);
     return (
         
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <Box className="flex min-h-screen flex-col items-center justify-between" w="100%" p="4" md="p-24">
             
             <Helmet>
                 <script async src="https://www.airbnb.ca/embeddable/airbnb_jssdk"></script>
             </Helmet>
             
-            <Box w='95vw' overflowX='auto' padding={10}>
-            <SimpleGrid minChildWidth='450px' spacing='40px'>
+            <Box w='95vw' overflowX='auto' padding={2}>
+            <SimpleGrid minChildWidth='350px' spacing='40px'>
                 {listings.map((listing) => (
                     
-                    <Box key={listing.id} padding={10} flex='0 0 auto'>
-                        <div className="airbnb-embed-frame" data-id={listing.id} data-view="home" data-hide-price="true" style={{ width: '450px', height: '300px', margin: 'auto' }}>
+                    <Box key={listing.id} padding={2} flex='0 0 auto'>
+                        <div className="airbnb-embed-frame" data-id={listing.id} data-view="home" data-hide-price="true" style={{ width: '450px', height: '300px', margin: '0px' }}>
                             <a href={`https://www.airbnb.ca/rooms/${listing.id}?guests=1&adults=1&s=66&source=embed_widget`}>View On Airbnb</a>
                             <a href={`https://www.airbnb.ca/rooms/${listing.id}?guests=1&adults=1&s=66&source=embed_widget`} rel="nofollow">{listing.title}</a>
                         </div>
@@ -57,10 +57,10 @@ const ListingsPage: React.FC = () => {
                 ))}
             </SimpleGrid>
             </Box>
-            
+            <div className="h-10"></div><div className="h-10"></div>
            
             
-        </main>
+        </Box>
         
     );
 };

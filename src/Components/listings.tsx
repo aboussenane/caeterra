@@ -39,7 +39,7 @@ const Listings: React.FC = () => {
                 <script async src="https://www.airbnb.ca/embeddable/airbnb_jssdk"></script>
             </Helmet>
             <VStack spacing={8} w='100vw' display='flex' justifyContent='center' alignItems='center' position='relative' >
-            <Box w='95vw' overflowX='auto' padding={10}>
+            <Box w='95vw' overflowX='auto' padding={2}>
             <HStack
                 spacing={8} minWidth='max-content'
                 
