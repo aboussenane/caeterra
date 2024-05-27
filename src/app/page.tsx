@@ -32,7 +32,7 @@ export default function Home() {
   return (
     
     <Providers>
-      <Box className="flex min-h-screen flex-col items-center justify-between" w="100%" p="4" md="p-24">
+      <Box className="flex min-h-screen flex-col items-center justify-between" w="100%" p="4">
         <Header onSelectPage={setCurrentPage} />
         <VStack spacing={8} w="100%" alignItems="center">
           {renderPage()}
